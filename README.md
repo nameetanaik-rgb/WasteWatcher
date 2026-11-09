@@ -20,6 +20,48 @@ The application combines on-device AI, mobile development, cloud storage, and of
 - **User Authentication:** Supports account registration, login, and profile management.
 - **Waste Segregation Reminders:** Provides configurable local notifications to encourage daily waste segregation.
 
+
+## Application Screenshots
+
+### Home Screen
+![WasteWatcher Home](docs/screenshots/home.png)
+
+### Waste Classification
+![WasteWatcher Scan](docs/screenshots/scan.png)
+
+### Classification Result
+![WasteWatcher Result](docs/screenshots/result.png)
+
+### Scan History
+![WasteWatcher History](docs/screenshots/history.png)
+
+### User Profile
+![WasteWatcher Profile](docs/screenshots/profile.png)
+
+
+## System Architecture
+
+```mermaid
+flowchart TD
+    A[User] --> B[WasteWatcher Mobile App]
+
+    B --> C[Camera / Gallery]
+    C --> D[Image Preprocessing]
+    D --> E[TensorFlow Lite Model]
+    E --> F[Waste Classification]
+    F --> G[Disposal Guidance]
+    F --> H[Local Scan History]
+
+    H --> I{Internet Available?}
+    I -->|Yes| J[Supabase]
+    I -->|No| K[Pending Local Scans]
+    K -->|Connection Restored| J
+
+    B --> L[Supabase Authentication]
+    B --> M[Local Notifications]
+```
+
+
 ## Technology Stack
 
 | Category | Technologies |
@@ -187,7 +229,7 @@ WasteWatcher/
 
 ## Project Information
 
-**Project:** WasteWatcher 2.0
+**Project:** WasteWatcher 
 
 **Domain:** Artificial Intelligence, Machine Learning, Mobile Application Development
 
