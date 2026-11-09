@@ -1,9 +1,9 @@
 
-# WasteWatcher 2.0
+# WasteWatcher 
 
 ### AI-Powered Waste Classification and Smart Waste Management
 
-WasteWatcher 2.0 is an AI-powered mobile application designed to make waste segregation easier and more accessible. It uses machine learning to identify different types of waste from images and provides appropriate disposal guidance.
+WasteWatcher  is an AI-powered mobile application designed to make waste segregation easier and more accessible. It uses machine learning to identify different types of waste from images and provides appropriate disposal guidance.
 
 The application combines on-device AI, mobile development, cloud storage, and offline synchronization to support smarter waste management.
 
