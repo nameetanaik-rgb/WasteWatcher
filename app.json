@@ -1,3 +1,4 @@
+
 {
   "expo": {
     "name": "WasteWatcher",
@@ -10,6 +11,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.wastewatcher.app",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -19,6 +21,31 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "WasteWatcher needs access to your photos so you can select waste images.",
+          "cameraPermission": "WasteWatcher needs camera access to capture waste images.",
+          "microphonePermission": false
+        }
+      ],
+      "react-native-fast-tflite",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "WasteWatcher needs camera access to capture waste images.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-font",
+      "expo-notifications"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "276e5b72-5bc8-4221-b32e-566e37966828"
+      }
     }
   }
 }

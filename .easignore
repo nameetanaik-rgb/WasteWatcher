@@ -1,0 +1,6 @@
+
+dataset/
+node_modules/
+.git/
+.expo/
+dist/

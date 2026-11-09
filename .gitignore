@@ -32,6 +32,9 @@ yarn-error.*
 
 # local env files
 .env*.local
+.env
+.env.*
+!.env.example
 
 # typescript
 *.tsbuildinfo
@@ -39,3 +42,26 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+# WasteWatcher training dataset
+/dataset/
+
+# Python temporary files
+__pycache__/
+*.pyc
+.venv/
+
+# Local build outputs
+*.apk
+*.aab
+
+# Temporary files
+*.log
+# Exclude unused float32 model
+/assets/models/wastewatcher_float32.tflite
+# Exclude unused float32 model
+/assets/models/wastewatcher_float32.tflite
+
+# Python temporary files
+__pycache__/
+*.pyc
+.venv/
